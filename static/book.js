@@ -67,6 +67,8 @@ if (window.location.pathname.endsWith('dashboard.html')) {
 
   select.addEventListener('change', function() {
     nameTitle.textContent = select.value;
+    // When equipment changes, also auto-scroll calendar to top
+    window.scrollTo({top: 0, behavior: 'smooth'});
   });
 
   document.addEventListener('DOMContentLoaded', reloadCalendar);
@@ -87,18 +89,22 @@ async function reloadCalendar() {
 
   let events = await getEquipmentBookings(selectedEquipment);
 
+  // Use FullCalendar's "timeGridDay" on small screens for best mobile tap-ability
+  let isMobile = window.innerWidth < 700;
+
   currentCalendar = new FullCalendar.Calendar(calendarEl, {
-    initialView: 'timeGridWeek',
+    initialView: isMobile ? "timeGridDay" : "timeGridWeek",
     businessHours: false,
     slotMinTime: '00:00:00',
     slotMaxTime: '24:00:00',
-    slotDuration: "01:00:00",
+    slotDuration: isMobile ? "02:00:00" : "01:00:00",
     selectable: true,
-    height: 900,
+    height: isMobile ? "auto" : 900,
+    contentHeight: isMobile ? 'auto' : undefined,
     headerToolbar: {
       left: 'prev,next today',
       center: 'title',
-      right: 'timeGridWeek,timeGridDay'
+      right: isMobile ? "timeGridDay" : 'timeGridWeek,timeGridDay'
     },
     events: events,
     select: async function(info) {

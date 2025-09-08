@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Lab Equipment Dashboard</title>
+  <link href='https://cdn.jsdelivr.net/npm/fullcalendar@6.1.8/index.global.min.css' rel='stylesheet' />
+  <style>
+    body { font-family: Arial; }
+    #calendar { max-width: 1100px; margin: 30px auto; }
+    #equipment-select { margin: 10px auto; display: block; }
+    #logout-btn { position: absolute; top: 10px; right: 30px; }
+  </style>
+</head>
+<body>
+  <button id="logout-btn" onclick="logout()">Logout</button>
+  <h2 style="text-align:center">Lab Equipment Calendar Booking</h2>
+  <label for="equipment-select" style="margin-left:30px;">Select Equipment:</label>
+  <select id="equipment-select" onchange="reloadCalendar()"></select>
+  <div id="calendar"></div>
+
+  <script src='https://cdn.jsdelivr.net/npm/fullcalendar@6.1.8/index.global.min.js'></script>
+  <script src="book.js"></script>
+</body>
+</html>

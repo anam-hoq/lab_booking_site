@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Dashboard</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href='https://cdn.jsdelivr.net/npm/fullcalendar@6.1.8/index.global.min.css' rel='stylesheet' />
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <button id="logout-btn" onclick="logout()">Logout</button>
+  <h1 id="equipment-name" class="equip-name"></h1>
+  <div class="equipment-selector">
+    <label for="equipment-select">Choose Equipment:</label>
+    <select id="equipment-select" onchange="reloadCalendar()"></select>
+  </div>
+  <div id="calendar"></div>
+  <script src='https://cdn.jsdelivr.net/npm/fullcalendar@6.1.8/index.global.min.js'></script>
+  <script src="book.js"></script>
+</body>
+</html>

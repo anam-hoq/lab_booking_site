@@ -1,0 +1,80 @@
+body {
+  font-family: 'Segoe UI', Arial, sans-serif;
+  background: #f8f8fc;
+  margin: 0;
+  padding: 0;
+}
+
+.login-form {
+  width: 360px;
+  margin: 80px auto;
+  background: #fff;
+  padding: 2em 2.5em;
+  border-radius: 12px;
+  box-shadow: 0 6px 30px #9cc2ef55;
+}
+
+input[type="text"], input[type="password"] {
+  width: 100%;
+  font-size: 1.15em;
+  margin: 1em 0;
+  padding: 0.7em;
+  border: 1px solid #a3bffa;
+  border-radius: 7px;
+}
+
+button {
+  width: 100%;
+  padding: 1em;
+  border: none;
+  font-size: 1.14em;
+  background: #3788d8;
+  color: #fff;
+  border-radius: 7px;
+  box-shadow: 0 3px 12px #bcdcff55;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+button:hover, #logout-btn:hover {
+  background: #1760a8;
+}
+
+#logout-btn {
+  position: fixed;
+  top: 18px;
+  right: 50px;
+  z-index: 100;
+  font-size: 1.1em;
+  background: #b32c2c;
+  padding: 0.6em 1.3em;
+}
+
+.equipment-selector {
+  margin: 30px auto 18px auto;
+  text-align: center;
+}
+
+#equipment-select {
+  font-size: 1.11em;
+  padding: 0.34em 0.9em;
+  border-radius: 8px;
+  margin-left: 10px;
+}
+
+.equip-name {
+  text-align: center;
+  font-size: 2.2em;
+  margin-top: 42px;
+  margin-bottom: 0;
+  color: #2457a6;
+  letter-spacing: 2px;
+}
+#calendar {
+  max-width: 1100px;
+  margin: 22px auto 55px auto;
+  background: #fff;
+  border-radius: 8px;
+  box-shadow: 0 6px 32px #aac9f855;
+  padding: 20px 10px 20px 10px;
+}

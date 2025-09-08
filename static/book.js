@@ -1,12 +1,12 @@
-// Allowed users
+// Custom users with new usernames/passwords
 const allowedUsers = [
-  { user: 'user1', pass: '1234' },
-  { user: 'user2', pass: '1234' },
-  { user: 'user3', pass: '1234' }
+  { user: 'anam', pass: '12233344' },
+  { user: 'msok', pass: '12233344' },
+  { user: 'ssarker', pass: '12233344' }
 ];
 
-// List your equipment here
-const equipmentList = [ "Microscope", "3D Printer", "Oscilloscope" ];
+// Custom equipment list
+const equipmentList = [ "Upnano", "Elegoo Mars 4", "ASIGA" ];
 
 // Login logic (index.html)
 function loginUser() {
